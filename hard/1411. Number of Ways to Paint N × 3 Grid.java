@@ -13,3 +13,14 @@ class Solution {
         return (int) ((A + B) % MOD);
     }
 }
+//optimal solution using 
+// 1.The code counts how many ways to color an n × 3 grid using 3 colors.
+// 2.Adjacent cells (horizontal or vertical) cannot have the same color.
+// 3.Each row can only be colored in two valid pattern types.
+// 4.Pattern A (ABA): first and third cells have the same color.
+// 5.Pattern B (ABC): all three cells have different colors.
+// 6.A stores the number of ways ending with pattern ABA.
+// 7.B stores the number of ways ending with pattern ABC.
+// 8.For each new row, valid transitions update A and B.
+// 9.The final answer is A + B, modulo 1e9 + 7.
+//jan 3
