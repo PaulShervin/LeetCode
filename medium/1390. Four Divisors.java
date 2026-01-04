@@ -32,3 +32,12 @@ class Solution {
 }
 
 //jan 4
+// Solves the problem correctly
+
+// Minimizes time complexity
+
+// Minimizes space complexity
+
+// Avoids unnecessary computations
+
+// Works efficiently for the maximum input constraints
