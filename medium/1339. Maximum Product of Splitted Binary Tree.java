@@ -46,3 +46,21 @@ class Solution {
     }
 }
 //jan 7
+// The optimal solution computes the maximum product of the sums of two subtrees formed by removing exactly one edge from a binary tree.
+// It achieves this by:
+
+// Calculating the total sum of all nodes in the tree.
+
+// Performing a second traversal to compute the sum of every possible subtree.
+
+// At each subtree, calculating the product of:
+
+// the subtree sum, and
+
+// the remaining tree sum (totalSum − subtreeSum)
+
+// Tracking the maximum product encountered.
+
+// Returning the result modulo 10⁹ + 7.
+
+// This solution is optimal because it visits each node a constant number of times, resulting in linear time complexity.
