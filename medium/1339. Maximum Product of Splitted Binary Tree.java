@@ -45,3 +45,4 @@ class Solution {
         return (int)(maxproduct%mod);
     }
 }
+//jan 7
