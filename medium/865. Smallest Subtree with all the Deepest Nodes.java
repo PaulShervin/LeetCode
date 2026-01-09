@@ -8,7 +8,6 @@ class Solution {
         max_depth = -1;
         for (Integer d: depth.values())
             max_depth = Math.max(max_depth, d);
-
         return answer(root);
     }
     public void dfs(TreeNode node, TreeNode parent) {
