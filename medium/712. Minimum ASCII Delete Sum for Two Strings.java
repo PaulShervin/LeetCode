@@ -24,3 +24,12 @@ class Solution {
     }
 }
 // jan 10 
+// This solution works by using a 2D table (dp) to store the minimum ASCII delete cost needed to make prefixes of the two strings equal. Here, 
+// dp[i][j] represents the minimum cost to make the first i characters of s1 and the first j characters of s2 the same. First, the base cases are handled:
+// if one string is empty, the only option is to delete all characters from the other string, so we keep adding the ASCII values of those characters. 
+// Then we fill the table step by step. For each pair of positions (i, j), we compare the current characters of both strings.
+// If they are the same, no deletion is needed, and we carry forward the previous cost from dp[i-1][j-1].
+// If they are different, we have two choices: delete the current character from s1 or delete the current character from s2.
+// Each choice adds the ASCII value of the deleted character to the cost, and we pick the cheaper option. 
+// By building the solution this way from smaller prefixes to larger ones, 
+// the final answer stored in dp[m][n] gives the minimum total ASCII delete sum needed to make the two full strings equal.dome
