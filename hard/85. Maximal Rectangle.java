@@ -55,17 +55,13 @@ class Solution {
 }
 //jan 11
 // Starting from row i, move downward:
-
 // For each row k:
-
 // Ensure matrix[k][j] > 0
 // Update current width as:
 // currentWidth = minimum of previous width and matrix[k][j]
 // Height becomes k - i + 1
 // Area is currentWidth * height
 // We update the global maximum area at each step.
-
 // The moment we hit a zero:
-
 // The rectangle can no longer be extended
-// We stop expanding downward
+// We stop expanding downwad
