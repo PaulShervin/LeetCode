@@ -17,3 +17,4 @@ class Solution {
     }
 }
 // jan 20
+// 32 min
