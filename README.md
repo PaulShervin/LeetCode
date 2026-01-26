@@ -65,7 +65,7 @@ Progress is updated regularly.
 LeetCode Profile
 
 Add your LeetCode profile link here
-Example: https://leetcode.com/your-username
+Example: https://leetcode.com/paulshervinp
 
 Notes
 
