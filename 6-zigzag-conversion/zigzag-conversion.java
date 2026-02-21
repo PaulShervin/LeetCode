@@ -8,10 +8,10 @@ class Solution {
         Arrays.setAll(g,m->new StringBuilder());
         int i=0;
         int k=-1;
-        for(char c:s.toCharArray())
+        for(char c :s.toCharArray())
         {
             g[i].append(c);
-            if(i==0 || i==numRows-1)
+            if(i==0||i==numRows-1)
             {
                 k=-k;
             }
