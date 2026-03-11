@@ -6,7 +6,7 @@ class Solution {
         }
         int no_of_bit=32-Integer.numberOfLeadingZeros(n);
         int answer=(1<<no_of_bit)-1;
-        n=n^answer;
-        return n;
+        answer^=n;;
+        return answer;
     }
 }
