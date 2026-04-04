@@ -1,27 +1,26 @@
 class Solution {
     public String decodeCiphertext(String encodedText, int rows) {
-        if (rows == 1)
+        if (rows==1)
             return encodedText;
 
-        int n = encodedText.length();
-        int cols = n / rows;
+        int n=encodedText.length();
+        int cols=n/rows;
 
-        StringBuilder res = new StringBuilder(n);
-
-        for (int c = 0; c < cols; c++) {
-            int r = 0, j = c;
-            while (r < rows && j < cols) {
-                res.append(encodedText.charAt(r * cols + j));
+        StringBuilder ans=new StringBuilder(n);
+        for (int i=0;i<cols;i++) {
+            int r=0;
+            int j=i;
+            while(r<rows&&j<cols) {
+                ans.append(encodedText.charAt(r*cols+j));
                 r++;
                 j++;
             }
         }
 
-        int end = res.length() - 1;
-        while (end >= 0 && res.charAt(end) == ' ') {
+        int end=ans.length()-1;
+        while (end>=0&&ans.charAt(end) ==' ') {
             end--;
         }
-
-        return res.substring(0, end + 1);
+        return ans.substring(0, end + 1);
     }
 }
