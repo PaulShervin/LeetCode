@@ -1,20 +1,20 @@
 class Solution {
     public int jump(int[] nums) {
-        int near=0;
-        int far=0;
-        int j_count=0;
-        while(far<nums.length-1)
-        {
-            int temp=0;
-            for(int i=near;i<=far;i++)
-            {
-                temp=Math.max(temp,i+nums[i]);
+        int jumps = 0;
+        int currentEnd = 0;
+        int farthest = 0;
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            // update farthest we can reach
+            farthest = Math.max(farthest, i + nums[i]);
+
+            // when we reach the end of current range
+            if (i == currentEnd) {
+                jumps++;
+                currentEnd = farthest;
             }
-            j_count++;
-            near=far+1;
-            far=temp;
-            temp=0;
         }
-        return j_count;
+
+        return jumps;
     }
 }
