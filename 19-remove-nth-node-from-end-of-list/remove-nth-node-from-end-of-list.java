@@ -34,6 +34,5 @@ class Solution {
         ptr2.next=ptr2.next.next;
         return head;
 
-
     }
 }
