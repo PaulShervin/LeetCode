@@ -2,20 +2,20 @@ class Solution {
     public boolean backspaceCompare(String s, String t) {
         return loop(s).equals(loop(t));
     }
-    public String loop(String s)
+    public String loop(String str)
     {
-        Stack<Character> str=new Stack<>();
-        String res="";
-        for(int i=0;i<s.length();i++)
+        Stack<Character> stack=new Stack<>();
+        for(char s:str.toCharArray())
         {
-            if(s.charAt(i)!='#')
+            if(s!='#')
             {
-                str.push(s.charAt(i));
+                stack.push(s);
             }
-            else if(!str.isEmpty()){
-                str.pop();
+            else if(!stack.isEmpty())
+            {
+                stack.pop();
             }
         }
-        return String.valueOf(str);
+        return String.valueOf(stack);
     }
 }
