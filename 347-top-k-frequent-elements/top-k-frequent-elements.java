@@ -5,15 +5,15 @@ class Solution {
         {
             map.put(nums[i],map.getOrDefault(nums[i],0)+1);
         }
-        PriorityQueue<Integer> queue=new PriorityQueue(
+        PriorityQueue<Integer> pq=new PriorityQueue<>(
             (a,b)->map.get(b)-map.get(a)
         );
-        queue.addAll(map.keySet());
-        int[] res=new int[k];
+        pq.addAll(map.keySet());
+        int[] arr=new int[k];
         for(int i=0;i<k;i++)
         {
-            res[i]=queue.poll();
+            arr[i]=pq.poll();
         }
-        return res;
+        return arr;
     }
 }
