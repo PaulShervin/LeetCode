@@ -4,9 +4,9 @@ class Solution {
         {
             return 1;
         }
-        int no_of_bit=32-Integer.numberOfLeadingZeros(n);
-        int answer=(1<<no_of_bit)-1;
-        answer^=n;;
-        return answer;
+        int no_of_bits=32-Integer.numberOfLeadingZeros(n);
+        int ans=(1<<no_of_bits)-1;
+        ans^=n;
+        return ans;
     }
 }
