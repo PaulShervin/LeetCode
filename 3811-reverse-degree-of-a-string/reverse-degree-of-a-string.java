@@ -6,7 +6,6 @@ class Solution {
         for(int i=0;i<s.length();i++)
         {
             int num=26-(arr[i]-'a');
-            System.out.println(num-7);
             sum+=num*count;
             count++;
         }
