@@ -9,8 +9,8 @@ class Solution {
             }
             else if(i==10)
             {
-                arr[1]++;
                 arr[0]--;
+                arr[1]++;
                 if(arr[0]<0)
                 {
                     return false;
