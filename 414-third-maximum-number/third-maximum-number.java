@@ -1,0 +1,26 @@
+class Solution {
+    public int thirdMax(int[] nums) {
+        Integer first = null;
+        Integer second = null;
+        Integer third = null;
+        
+        for (int n : nums) {
+            if ((first!=null && n==first) || 
+                (second!=null && n==second) || 
+                (third!=null && n==third)) {
+                continue;
+            }            
+            if (first==null || n>first) {
+                third=second;
+                second=first;
+                first=n;
+            } else if(second==null || n>second) {
+                third=second;
+                second=n;
+            } else if(third==null||n>third) {
+                third=n;
+            }
+        }
+        return third == null ? first : third;
+    }
+}
