@@ -1,17 +1,20 @@
 class Solution {
-    public int climbStairs(int n) {
-        if(n<=2)
+
+    public int climbStairs(int n)
+    {
+        int[] dp=new int[n+1];
+        return climbStairs(n,dp);
+    }
+    public int climbStairs(int n,int[] dp) {
+        if(n<=1)
         {
-            return n;
+            return 1;
         }
-        int a=1;
-        int b=2;
-        for(int i=3;i<=n;i++)
+        if(dp[n]!=0)
         {
-            int c=a+b;
-            a=b;
-            b=c;
+            return dp[n];
         }
-        return b;
+        dp[n]=climbStairs(n-1,dp)+climbStairs(n-2,dp);
+        return dp[n];
     }
 }
